@@ -1,4 +1,5 @@
 /*
+ *  © 2024, Paul M. Antoine
  *  © 2022, Peter Cole. All rights reserved.
  *  © 2023, Peter Cole. All rights reserved.
  *  
@@ -62,6 +63,8 @@
 #include "arduino_arch_samd.h"
 #elif defined(ARDUINO_BLUEPILL_F103C8)
 #include "arduino_bluepill_f103c8.h"
+#elif defined(ARDUINO_BLACKPILL_F401CC)
+#include "arduino_blackpill_f401cc.h"
 #endif
 
 /*

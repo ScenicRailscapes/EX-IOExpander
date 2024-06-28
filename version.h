@@ -2,8 +2,10 @@
 #define VERSION_H
 
 // Version must only ever be numeric in order to be able to send it to the CommandStation
-#define VERSION "0.0.23"
+#define VERSION "0.0.23a"
 
+// 0.0.23a includes:
+//  - Add experimental definition for BlackPill F401CC devices
 // 0.0.23 includes:
 //  - Add use of Servo library for controlling servos for supported platforms
 //  - Add SuperPin class for neat dimming of LEDs without needing hardware PWM pins

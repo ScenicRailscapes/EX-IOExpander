@@ -1,4 +1,5 @@
 /*
+ *  © 2024, Paul M. Antoine
  *  © 2023, Peter Cole. All rights reserved.
  *  
  *  This file is part of EX-IOExpander.
@@ -71,6 +72,11 @@
 #define TOTAL_PINS 28
 #define NUM_PWM_PINS 19
 #define MAX_SUPERPINS 28
+#elif defined(ARDUINO_BLACKPILL_F401CC)
+#define BOARD_TYPE F("BLACKPILL-STM32F401CC")
+#define TOTAL_PINS 28
+#define NUM_PWM_PINS 19
+#define MAX_SUPERPINS 28
 #else
 #define CPU_TYPE_ERROR
 #endif
@@ -81,7 +87,8 @@
 
 #undef USB_SERIAL           // Teensy has this defined by default (in case we ever support Teensy)
 #define USB_SERIAL Serial   // Standard serial port most of the time!
-#if defined(ARDUINO_ARCH_SAMD)
+#if defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_BLACKPILL_F401CC)
+#warning found usb serial 
 #undef USB_SERIAL
 #define USB_SERIAL SerialUSB  // Most SAMD21 clones use native USB on the SAMD21G18 variants
 #endif
