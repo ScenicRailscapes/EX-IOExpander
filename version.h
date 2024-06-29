@@ -6,6 +6,7 @@
 
 // 0.0.23a includes:
 //  - Add experimental definition for BlackPill F401CC devices
+//  - Add experimental definition for BlackPill F411CE devices
 // 0.0.23 includes:
 //  - Add use of Servo library for controlling servos for supported platforms
 //  - Add SuperPin class for neat dimming of LEDs without needing hardware PWM pins
