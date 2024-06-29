@@ -75,7 +75,12 @@
 #elif defined(ARDUINO_BLACKPILL_F401CC)
 #define BOARD_TYPE F("BLACKPILL-STM32F401CC")
 #define TOTAL_PINS 28
-#define NUM_PWM_PINS 19
+#define NUM_PWM_PINS 21
+#define MAX_SUPERPINS 28
+#elif defined(ARDUINO_BLACKPILL_F411CE)
+#define BOARD_TYPE F("BLACKPILL-STM32F411CE")
+#define TOTAL_PINS 28
+#define NUM_PWM_PINS 21
 #define MAX_SUPERPINS 28
 #else
 #define CPU_TYPE_ERROR
@@ -87,7 +92,7 @@
 
 #undef USB_SERIAL           // Teensy has this defined by default (in case we ever support Teensy)
 #define USB_SERIAL Serial   // Standard serial port most of the time!
-#if defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_BLACKPILL_F401CC)
+#if defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_BLACKPILL_F401CC) || defined(ARDUINO_BLACKPILL_F411CE)
 #warning found usb serial 
 #undef USB_SERIAL
 #define USB_SERIAL SerialUSB  // Most SAMD21 clones use native USB on the SAMD21G18 variants

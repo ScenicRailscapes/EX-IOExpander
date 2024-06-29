@@ -18,11 +18,12 @@
  *  along with CommandStation.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef ARDUINO_BLACKPILL_F401CC_H
-#define ARDUINO_BLACKPILL_F401CC_H
+#ifndef ARDUINO_BLACKPILL_F411CE_H
+#define ARDUINO_BLACKPILL_F411CE_H
 
 #include <Arduino.h>
 #include "globals.h"
+
 pinDefinition pinMap[TOTAL_PINS] = {
   {PB12,DIOP},{PB13,DIOP},{PB14,DIOP},{PB15,DIOP},{PA8,DIOP},{PA9,DIOP},{PA10,DIOP},{PA15,DIOP}, // P1 (left row)
   {PB3,DIOP},{PB4,DIOP},{PB5,DIOP},{PB6,DIOP},{PB7,DIOP}, // P1 (left row)

@@ -65,6 +65,8 @@
 #include "arduino_bluepill_f103c8.h"
 #elif defined(ARDUINO_BLACKPILL_F401CC)
 #include "arduino_blackpill_f401cc.h"
+#elif defined(ARDUINO_BLACKPILL_F411CE)
+#include "arduino_blackpill_f411ce.h"
 #endif
 
 /*
@@ -94,7 +96,7 @@ void setup() {
 #if defined(ARDUINO_BLUEPILL_F103C8)
   disableJTAG();
 #endif
-  Serial.begin(115200);
+  USB_SERIAL.begin(115200);
   USB_SERIAL.print(F("DCC-EX EX-IOExpander v"));
   USB_SERIAL.println(VERSION);
   USB_SERIAL.print(F("Detected device: "));
