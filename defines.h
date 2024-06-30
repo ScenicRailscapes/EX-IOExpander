@@ -93,7 +93,6 @@
 #undef USB_SERIAL           // Teensy has this defined by default (in case we ever support Teensy)
 #define USB_SERIAL Serial   // Standard serial port most of the time!
 #if defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_BLACKPILL_F401CC) || defined(ARDUINO_BLACKPILL_F411CE)
-#warning found usb serial 
 #undef USB_SERIAL
 #define USB_SERIAL SerialUSB  // Most SAMD21 clones use native USB on the SAMD21G18 variants
 #endif

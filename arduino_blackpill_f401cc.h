@@ -25,17 +25,17 @@
 #include "globals.h"
 pinDefinition pinMap[TOTAL_PINS] = {
   {PB12,DIOP},{PB13,DIOP},{PB14,DIOP},{PB15,DIOP},{PA8,DIOP},{PA9,DIOP},{PA10,DIOP},{PA15,DIOP}, // P1 (left row)
-  {PB3,DIOP},{PB4,DIOP},{PB5,DIOP},{PB6,DIOP},{PB7,DIOP}, // P1 (left row)
+  {PB3,DIOP},{PB4,DIOP},{PB5,DIOP},{PB8,DIOP},{PB9,DIOP}, // P1 (left row)
   {PB10,DIOP},{PB2,DIO},{PB1,AIDIOP},{PB0,AIDIOP},{PA7,AIDIOP},{PA6,AIDIOP},{PA5,DIOP},  // P2 (right row)
   {PA4,AIDIO},{PA3,AIDIO},{PA2,AIDIO},{PA1,AIDIOP},{PA0,AIDIOP},{PC15,DIO},{PC14,DIO},{PC13,DIO},  // P2 (right row)
 };
 
-#define I2C_SDA PB9
-#define I2C_SCL PB8
+#define I2C_SDA PB7
+#define I2C_SCL PB6
 
 pinName pinNameMap[TOTAL_PINS] = {
   {PB12,"PB12"},{PB13,"PB13"},{PB14,"PB14"},{PB15,"PB15"},{PA8,"PA8"},{PA9,"PA9"},{PA10,"PA10"},{PA15,"PA15"}, // P1 (left row)
-  {PB3,"PB3"},{PB4,"PB4"},{PB5,"PB5"},{PB6,"PB6"},{PB7,"PB7"}, // P1 (left row)
+  {PB3,"PB3"},{PB4,"PB4"},{PB5,"PB5"},{PB8,"PB8"},{PB9,"PB9"}, // P1 (left row)
   {PB10,"PB10"},{PB2,"PB2"},{PB1,"PB1"},{PB0,"PB0"},{PA7,"PA7"},{PA6,"PA6"},{PA5,"PA5"},  // P2 (right row)
   {PA4,"PA4"},{PA3,"PA3"},{PA2,"PA2"},{PA1,"PA1"},{PA0,"PA0"},{PC15,"PC15"},{PC14,"PC14"},{PC13,"PC13"}, // P2 (right row)
 };
@@ -43,7 +43,7 @@ pinName pinNameMap[TOTAL_PINS] = {
 /*
 Pins not available for use:
 Digital - PA13|14 (debugger),PH0|1 (clock), PC14|15 (used by 32KHz oscillator)
-Digital - PB8|9 (I2C)
+Digital - PB6|7 (I2C)
 Digital - PA11/12 (USB D-/D+)
 Notes:
     PC13 has a green LED - 0 to this pin to turn it on
