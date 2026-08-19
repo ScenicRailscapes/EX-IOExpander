@@ -67,6 +67,8 @@
 #include "arduino_blackpill_f401cc.h"
 #elif defined(ARDUINO_BLACKPILL_F411CE)
 #include "arduino_blackpill_f411ce.h"
+#elif defined(ARDUINO_ARCH_ESP32) || defined(ESP32)
+#include "arduino_esp32_wroom.h"
 #endif
 
 /*
@@ -115,7 +117,11 @@ void setup() {
   setVersion();
   setupPinDetails();
   servoDataArray = (ServoData**) calloc(numPins, sizeof(ServoData*));
-  Wire.begin(i2cAddress);
+  #if defined(ESP32)
+    Wire.begin(i2cAddress, I2C_SDA, I2C_SCL, 0);
+  #else
+    Wire.begin(i2cAddress);
+  #endif
 // If desired and pins defined, disable I2C pullups
 #if defined(DISABLE_I2C_PULLUPS) && defined(I2C_SDA) && defined(I2C_SCL)
   USB_SERIAL.print(F("Disabling I2C pullups on pins SDA|SCL: "));

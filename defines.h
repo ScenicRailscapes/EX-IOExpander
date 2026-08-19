@@ -82,6 +82,11 @@
 #define TOTAL_PINS 28
 #define NUM_PWM_PINS 21
 #define MAX_SUPERPINS 28
+#elif defined(ARDUINO_ARCH_ESP32) || defined(ESP32)
+#define BOARD_TYPE F("ESP32-WROOM-38P")
+#define TOTAL_PINS 20
+#define NUM_PWM_PINS 16
+#define MAX_SUPERPINS 20
 #else
 #define CPU_TYPE_ERROR
 #endif
